@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /webbanhang/app/admin/
+
+# Chuyển hướng tất cả các yêu cầu đến index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ ../app/admin/index.php [QSA,L]
